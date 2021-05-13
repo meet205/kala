@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>E-CARD</title>
+</head>
+
+<body>
+    <div class="container_fiuld">
+        <div class="row">
+            <div class="col-md-10 col-11 mx-auto">
+                <div class="row mt-5 gx-3">
+                    <!-- left side -->
+                    <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0  mb-5 shadow">
+                        <div class="card p-4">
+
+                            <h2 class="py-4 font-weight-bold ">card (2 items)</h2>
+                            <div class="row">
+                                <!-- image part -->
+                                <div class="col-md-5 col-11 bg-light mx-auto d-flex justify-content-center align-items-center shadow product_img">
+                                    <img src="images/img1.png" class="img-fluid" alt="card-image">
+                                </div>
+                                <!-- product detail -->
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        <!-- product name -->
+                                        <div class="col-6  card_title">
+                                            <h1 class="mb-4 product_name">Green Choli</h1>
+                                            <p class="mb-2">SIZE: Xl</p>
+                                            <p class="mb-3">COLOR: WhiteGreen</p>
+                                        </div>
+                                        <!-- quantity inc dec  -->
+                                        <div class="col-6 ">
+                                            <ul class="pagination justify-content-end set_quantity">
+                                                <li class="page-item"><button class="page-link" onclick="minusNumber('textbox','itemval')"><i class="fas fa-minus"></i></button></li>
+                                                <li class="page-item"><input class="page-link" type="text" id="textbox" value="0"></li>
+                                                <li class="page-item"><button class="page-link" onclick="plusNumber('textbox','itemval')"><i class="fas fa-plus"></i></button></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- remove like and price -->
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p><i class="fas fa-trash-alt"></i>DELETE</p>
+                                            <p><i class="fas fa-heart"></i>MOVE WISH LIST</p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_money ">
+                                            <h3>$<span id="itemval">0.00</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          
+
+                        </div>
+                        
+                        <!-- card 2 -->
+                        <div class="card p-4">
+                                <div class="row">
+                                    <!-- image part -->
+                                    <div class="col-md-5 col-11 bg-light mx-auto d-flex justify-content-center align-items-center shadow product_img">
+                                        <img src="images/img2.png" class="img-fluid" alt="card-image">
+                                    </div>
+                                    <!-- product detail -->
+                                    <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                        <div class="row">
+                                            <!-- product name -->
+                                            <div class="col-6  card_title">
+                                                <h1 class="mb-4 product_name">Blue Choli</h1>
+                                                <p class="mb-2">SIZE: Xl</p>
+                                                <p class="mb-3">COLOR: Blue </p>
+                                            </div>
+                                            <!-- quantity inc dec  -->
+                                            <div class="col-6 ">
+                                                <ul class="pagination justify-content-end set_quantity">
+                                                    <li class="page-item"><button class="page-link" onclick="minusNumber('textbox1','itemval1')"><i class="fas fa-minus"></i></button></li>
+                                                    <li class="page-item"><input class="page-link" type="text" id="textbox1" value="0"></li>
+                                                    <li class="page-item"><button class="page-link" onclick="plusNumber('textbox1','itemval1')"><i class="fas fa-plus"></i></button></li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- remove like and price -->
+                                        <div class="row">
+                                            <div class="col-8 d-flex justify-content-between remove_wish">
+                                                <p><i class="fas fa-trash-alt"></i>DELETE</p>
+                                                <p><i class="fas fa-heart"></i>MOVE WISH LIST</p>
+                                            </div>
+                                            <div class="col-4 d-flex justify-content-end price_money ">
+                                                <h3>$<span id="itemval1">0.00</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                    <!-- right side -->
+                    <div class="col-md-12 col-lg-4 col-11  mx-auto mt-lg-0 mt-md-5">
+                        <div class="right_side p-3 shadow bg-white">
+                            <h2 class="product_name mb-5">Total Amount Of</h2>
+                            <div class="price_indi justify-content-between d-flex">
+                                <p>product ammount</p>
+                                <p>$<span id="product_amount">0.00</span></p>
+                                        </div>
+                                        <div class="price_indi d-flex justify-content-between">
+                                            <p>shipping charge</p>
+                                            <p>$<span id="charge">50.0</span></span>
+                                            </p>
+                                        </div>
+                                        <hr />
+                                        <div class="total_amo d-flex justify-content-between font-weight-bold">
+                                            <p>Total Ammount</p>
+                                            <p>$<span id="total">0.00</span></p>
+                                        </div>
+                                        <button class="btn btn-primary text-uppercase">checkout</button>
+                                    </div>
+                                    <!-- descount card  -->
+                                    <div class="descount_code mt-3 p-3 shadow">
+                                        <div class="card">
+                                            <div class="card_body ">
+                                                <a class=" d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                   Add discount (optional)<span><i class="fas fa-chevron-down pt-1"></i></span>
+                                                  </a>
+                                                <div class="collapse" id="collapseExample">
+                                                    <div class="mt-3">
+                                                        <input class="form-control font-weight-bold" type="text" id="discount_code1" placeholder="Enter The Code">
+                                                        <small id="error_trw" class="text-dark mt-3 ">code is meet</small>
+                                                    </div>
+                                                    <button class="btn btn-primary btn-sm mt-3" onclick="discount()">Apply</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- date  -->
+                                    <div class="mt-3 p-3 shadow bg-white">
+                                        <div class="pt-4">
+                                            <h5 class="mb-4">Expected Delivery date</h5>
+                                            <p>july 27th 2020 - july 29th 2020</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Optional JavaScript; choose one of the two! -->
+
+                <!-- Option 1: Bootstrap Bundle with Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+                <!-- Option 2: Separate Popper and Bootstrap JS -->
+                <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+    -->
+
+                <script>
+                    var product_amount = document.getElementById('product_amount')
+                    var charge = document.getElementById('charge')
+                    var total = document.getElementById('total')
+
+                    function minusNumber(plus, price) {
+                        var num = document.getElementById(plus);
+                        var price = document.getElementById(price);
+                        if (num.value <= 0) {
+                            num.value = 0;
+                            alert("no purchase any minus digits")
+                        } else {
+                            num.value = parseInt(num.value) - 1;
+                            num.style.backgroundColor = '#fff'
+                            num.style.Color = '#000'
+                            price.innerHTML = parseInt(price.innerHTML) - 15
+                            product_amount.innerHTML = parseInt(product_amount.innerHTML) - 15;
+                            total.innerHTML = parseInt(product_amount.innerHTML) + parseInt(charge.innerHTML);
+                        }
+                    }
+
+                    function plusNumber(plus, price) {
+                        var num = document.getElementById(plus);
+                        var price = document.getElementById(price);
+                        if (num.value >= 5) {
+                            num.value = 5;
+                            alert("no purchase more then 5")
+                            num.style.backgroundColor = 'red'
+                            num.style.Color = '#fff'
+                        } else {
+                            num.value = parseInt(num.value) + 1;
+                            price.innerHTML = parseInt(price.innerHTML) + 15
+                            product_amount.innerHTML = parseInt(product_amount.innerHTML) + 15
+                            total.innerHTML = parseInt(product_amount.innerHTML) + parseInt(charge.innerHTML);
+                        }
+                    }
+
+                    function discount() {
+                        var input = document.getElementById('discount_code1')
+
+                        var error_trw = document.getElementById('error_trw')
+                        let curr_amo = parseInt(total.innerHTML);
+                        if (input.value === 'meet') {
+                            let newamo = curr_amo - 15;
+                            total.innerHTML = newamo;
+                            error_trw.innerHTML = "hurray!! code is valid"
+                        } else {
+                            error_trw.innerHTML = "plz enter valid code"
+                        }
+                    }
+                </script>
+
+</body>
+
+</html>
+
+</html>
